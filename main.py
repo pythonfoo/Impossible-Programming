@@ -39,6 +39,7 @@ constraint = QLineEdit(window)
 # Die beiden Knöpfe werden initialisiert
 new_button = QPushButton("New", window)
 save_button = QPushButton("Save", window)
+load_button = QPushButton("Load", window)
 
 # Die Aktionen beim Drücken der Knöpfe werden definiert
 def onClick_new():
@@ -59,12 +60,14 @@ def onClick_save():
     constraint_str = constraint.text()
     result_str = get_job(project_str, language_str, constraint_str)
     save_job(result_str)
-    # ToDo:
-    # Abspeichern eines Ergebnisses in einer Datei
+
+def onClick_load():
+    pass
 
 # Den Knöpfen werden ihre Aktionen zugeordnet
 new_button.clicked.connect(onClick_new)
 save_button.clicked.connect(onClick_save)
+load_button.clicked.connect(onClick_load)
 
 # Die Elemente werden in das Layout hinzugefügt:
 layout.addWidget(write_label)
@@ -75,6 +78,7 @@ layout.addWidget(language)
 layout.addWidget(constraint)
 layout.addWidget(new_button)
 layout.addWidget(save_button)
+layout.addWidget(load_button)
 
 # Das Layout wird zum Fenster hinzugefügt
 window.setLayout(layout)
