@@ -1,0 +1,22 @@
+Schreibe Snake in Matlab/Octave in Vim (ohne Einrückungen und Syntax Highlighting).
+
+Schreibe eine Animation von mind. 30 s Länge und mind. 25 unterschiedlichen Bildern in OCaml mit nur einer Variablen.
+
+Schreibe einen Webshop mit mind. 30 Artikeln, Bestellfunktion und Warenkorb in COBOL in Vim (ohne Einrückungen und Syntax Highlighting).
+
+Schreibe eine Quine in Ruby mit nur einer Variablen.
+
+Schreibe eine Textsuchmaschine  in COBOL in einer Stunde.
+
+Schreibe eine 3D-Animation in ASCII  in Lua ohne die Hände zu benutzen.
+
+Schreibe Pacman in Latex in einer einzigen Datei mit exakt 1337 Bytes (es MUSS ein Unicode-Zeichen vorkommen).
+
+Schreibe eine Textsuchmaschine  in Latex in einer einzigen Datei mit max. 1kB Speicherbedarf .
+
+Schreibe ein Spiel mit mindestens einer Interaktionsmöglichkeit und grafischer Oberfläche in Go ohne die Hände zu benutzen.
+
+Schreibe Pacman in ActionScript in einer einzigen Datei mit nicht mehr als 500 Zeichen.
+
+Schreibe einen Webserver (die Verbindung zum Webserver muss für zwei Stunden ununterbrochen aufrechterhalten werden) in Windows PowerShell in einer einzigen Datei mit nicht mehr als 500 Zeichen.
+
