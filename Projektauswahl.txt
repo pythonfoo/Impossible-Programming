@@ -11,3 +11,4 @@ Minesweeper
 Snake
 Tetris
 Pacman
+einen Browser mit graphischer Oberfläche, Verlauf, Lesezeichenfunktion
