@@ -8,3 +8,7 @@ Mit Hilfe einer Checkbox soll eine Eingabe fixiert werden können, sodass sie ni
 Auf Knopfdruck soll ein Ergebnis getweetet werden können.
 ## Jobs direkt speichern
 Jobs sollen direkt in der Messagebox gespeichert werden können.
+## Dateinamen verbessern
+Dateinamen sollen ins Englische übersetzt werden. main.py und backend.py sollen bessere Namen bekommen
+## ReadMe anlegen
+ReadMe anlegen und darin Motivation erklären
