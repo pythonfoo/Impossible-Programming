@@ -36,3 +36,4 @@ Brainfuck
 Microsoft Excel
 Visual Basic
 Pascal
+Scratch

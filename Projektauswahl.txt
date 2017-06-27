@@ -13,3 +13,6 @@ Tetris
 Pacman
 einen Browser mit graphischer Oberfläche, Verlauf und Lesezeichenfunktion
 einen Primzahlgenerator
+einen IRC Client
+einen Twitterbot
+Game of Life
