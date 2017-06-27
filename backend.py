@@ -32,4 +32,14 @@ def save_job(job_str):
     job_str += "\n\n"
     with open(job_filename, "a") as file_obj:
         file_obj.write(job_str)
+
+def load_job():
+    job_list = list_gen.lines_from_file(job_filename)
+    new_job_list = []
+    for job in job_list:
+        if job != "\n":
+            new_job_list.append(job)
+    job_list = new_job_list  
+    random_job = random.choice(job_list)
+    return random_job
     

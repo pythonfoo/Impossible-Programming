@@ -41,6 +41,12 @@ new_button = QPushButton("New", window)
 save_button = QPushButton("Save", window)
 load_button = QPushButton("Load", window)
 
+# Funktion zum Anzeigen eines Ergebnises in einer
+# Messagebox
+def job_messagebox(job):
+    mb = QMessageBox(QMessageBox.Information, "Aufgabe", job, QMessageBox.Ok, window)
+    mb.show()
+
 # Die Aktionen beim Drücken der Knöpfe werden definiert
 def onClick_new():
     project_str = get_project()
@@ -50,9 +56,7 @@ def onClick_new():
     language.setText(language_str)
     constraint.setText(constraint_str)
     result_str = get_job(project_str, language_str, constraint_str)
-    mb = QMessageBox(QMessageBox.Information, "Aufgabe", result_str, QMessageBox.Ok, window)
-    mb.show()
-    
+    job_messagebox(result_str)
 
 def onClick_save():
     project_str = project.text()
@@ -62,8 +66,9 @@ def onClick_save():
     save_job(result_str)
 
 def onClick_load():
-    pass
-
+    job = load_job()
+    job_messagebox(job)
+    
 # Den Knöpfen werden ihre Aktionen zugeordnet
 new_button.clicked.connect(onClick_new)
 save_button.clicked.connect(onClick_save)
