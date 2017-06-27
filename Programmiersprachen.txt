@@ -31,3 +31,8 @@ Objective-C++
 Fortran
 COBOL
 Julia
+Piet
+Brainfuck
+Microsoft Excel
+Visual Basic
+Pascal
