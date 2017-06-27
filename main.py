@@ -10,12 +10,6 @@ from backend import *
 
 import sys
 
-# ToDo:
-# Bewertungsfunktion
-# Fixieren von Eingaben
-# Aufgaben laden
-
-
 # So können Argumente für Qt5 dem Programm übergeben werden
 app = QApplication(sys.argv)
 
