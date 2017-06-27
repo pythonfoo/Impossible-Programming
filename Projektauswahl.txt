@@ -11,4 +11,5 @@ Minesweeper
 Snake
 Tetris
 Pacman
-einen Browser mit graphischer Oberfläche, Verlauf, Lesezeichenfunktion
+einen Browser mit graphischer Oberfläche, Verlauf und Lesezeichenfunktion
+einen Primzahlgenerator
