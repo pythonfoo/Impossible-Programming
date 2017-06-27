@@ -1,0 +1,13 @@
+einen Webserver (die Verbindung zum Webserver muss für zwei Stunden ununterbrochen aufrechterhalten werden)
+eine Quine
+ein Spiel mit mindestens einer Interaktionsmöglichkeit und grafischer Oberfläche
+einen wissenschaftlichen Taschenrechner mit grafischer Oberfläche
+eine Animation von mind. 30 s Länge und mind. 25 unterschiedlichen Bildern
+einen Webshop mit mind. 30 Artikeln, Bestellfunktion und Warenkorb
+eine Textsuchmaschine 
+eine 3D-Animation in ASCII 
+Pong
+Minesweeper
+Snake
+Tetris
+Pacman
