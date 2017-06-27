@@ -12,6 +12,7 @@ import sys
 
 # ToDo:
 # Bewertungsfunktion
+# Fixieren von Eingaben
 
 
 # So können Argumente für Qt5 dem Programm übergeben werden
