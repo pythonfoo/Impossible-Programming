@@ -13,6 +13,7 @@ import sys
 # ToDo:
 # Bewertungsfunktion
 # Fixieren von Eingaben
+# Aufgaben laden
 
 
 # So können Argumente für Qt5 dem Programm übergeben werden
@@ -59,7 +60,11 @@ def onClick_new():
     
 
 def onClick_save():
-    pass
+    project_str = project.text()
+    language_str = language.text()
+    constraint_str = constraint.text()
+    result_str = get_job(project_str, language_str, constraint_str)
+    save_job(result_str)
     # ToDo:
     # Abspeichern eines Ergebnisses in einer Datei
 
