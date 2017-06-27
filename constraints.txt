@@ -1,0 +1,13 @@
+in einer Stunde
+und nutze dabei möglichst viele Eigenheiten der Sprache, die den Code so kurz und unverständlich wie möglich machen
+mit max. 30 Variablen und 10 Konstanten (Funktionsnamen und -parameter werden mitgezählt)
+in einer einzigen Datei mit max. 1kB Speicherbedarf 
+in einer einzigen Datei mit nicht mehr als 500 Zeichen
+in einer einzigen Datei mit exakt 1337 Bytes (es MUSS ein Unicode-Zeichen vorkommen)
+mit Variablennamen, die genau 10 Zeichen lang sein müssen (ab dem ersten Buchstaben alles in Leetspeak)
+mit nur einer Variablen
+in Vim (ohne Einrückungen und Syntax Highlighting)
+in Emacs (ohne Einrückungen und Syntax Highlighting)
+ohne die Hände zu benutzen
+der/die/das für ein Betriebssystem optimiert ist
+sodass die Anzahl der Bytes durch ihre Hälfte teilbar ist (untere Hälfte, wenn ungerade)
