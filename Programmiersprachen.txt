@@ -37,3 +37,6 @@ Microsoft Excel
 Visual Basic
 Pascal
 Scratch
+Swift
+Shakespeare
+Whitespace

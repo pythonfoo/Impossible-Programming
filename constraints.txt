@@ -19,6 +19,9 @@ nur mit dem Touchpad oder dem Trackpoint
 mit farbinvertierten Bildschirm
 mit verbundenen Augen
 mit Twitter DMs als Eingabemethode
-mit einem Joystick als Eingabemethode
+der/die/das einem Joystick als Eingabemethode benutzt
 in einer einzigen Zeile
 , sodass die Anfangsbuchstaben jeder Zeile exakt die erste Zeile ergeben
+ohne Strings zu verwenden
+ohne das Einbinden von Bibliotheken
+ohne den Operator "+" zu benutzen

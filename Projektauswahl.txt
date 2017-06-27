@@ -16,3 +16,9 @@ einen Primzahlgenerator
 einen IRC Client
 einen Twitterbot
 Game of Life
+einen Algorithmus für das Travelling Salesman Problem
+einen Funktionsplotter
+einen Bildschirmschoner
+eine Vigenere Implementation
+einen Mehrwertsteuerrechner
+eine Quicksort Implementation
