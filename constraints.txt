@@ -11,3 +11,6 @@ in Emacs (ohne Einrückungen und Syntax Highlighting)
 ohne die Hände zu benutzen
 der/die/das für ein Betriebssystem optimiert ist
 sodass die Anzahl der Bytes durch ihre Hälfte teilbar ist (untere Hälfte, wenn ungerade)
+ohne Schleifen zu verwenden
+ohne Bedingungen zu verwenden
+mit maximal 100 verschiedenen Zeichen
