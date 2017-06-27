@@ -22,3 +22,5 @@ einen Bildschirmschoner
 eine Vigenere Implementation
 einen Mehrwertsteuerrechner
 eine Quicksort Implementation
+dieses Programm
+einen Farbselektor
