@@ -16,25 +16,23 @@ app = QApplication(sys.argv)
 # Das Fenster wird erstellt
 window = QWidget()
 
-# Vertikales Layout
-layout = QVBoxLayout()
+# Gitter Layout
+layout = QGridLayout()
 
 # 1. Label "Schreibe"
 write_label = QLabel("Schreibe")
 # 2. Label "in"
 in_label = QLabel("in")
 
-# 3. Label "mit"
-# with_label = QLabel("mit")
-
-
-
 # 1. Textfeld: Projekt
 project = QLineEdit(window)
+project.setFixedWidth(300)
 # 2. Textfeld: Programmiersprache
 language = QLineEdit(window)
+language.setFixedWidth(300)
 # 3. Textfeld: Herausforderung
 constraint = QLineEdit(window)
+constraint.setFixedWidth(300)
 
 # Die beiden Knöpfe werden initialisiert
 new_button = QPushButton("New", window)
@@ -75,15 +73,14 @@ save_button.clicked.connect(onClick_save)
 load_button.clicked.connect(onClick_load)
 
 # Die Elemente werden in das Layout hinzugefügt:
-layout.addWidget(write_label)
-layout.addWidget(project)
-layout.addWidget(in_label)
-layout.addWidget(language)
-# layout.addWidget(with_label)
-layout.addWidget(constraint)
-layout.addWidget(new_button)
-layout.addWidget(save_button)
-layout.addWidget(load_button)
+layout.addWidget(write_label,0,0)
+layout.addWidget(project, 0, 1)
+layout.addWidget(in_label, 1, 0)
+layout.addWidget(language, 1, 1)
+layout.addWidget(constraint, 2, 1)
+layout.addWidget(new_button, 3, 0)
+layout.addWidget(save_button, 3, 1)
+layout.addWidget(load_button, 3, 2)
 
 # Das Layout wird zum Fenster hinzugefügt
 window.setLayout(layout)
@@ -93,3 +90,4 @@ window.show()
 
 # App ausführen
 app.exec_()
+
