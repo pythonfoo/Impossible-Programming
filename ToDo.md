@@ -8,3 +8,5 @@ Jobs sollen direkt in der Messagebox gespeichert werden können.
 Dateinamen sollen ins Englische übersetzt werden. main.py und backend.py sollen bessere Namen bekommen
 ## Fixierung auch für das Laden
 Die Fixierung soll sich auch auf das Laden einer zufälligen Aufgabe beziehen.
+## Automatisierte Tweets
+Einen Cronjob schreiben, der automatisch einen Tweet absetzt.
