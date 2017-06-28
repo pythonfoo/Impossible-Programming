@@ -17,6 +17,3 @@ def lines_from_file(filename):
     file.close()
     
     return lines
-
-def choose_at_random():
-    pass
