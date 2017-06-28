@@ -41,10 +41,11 @@ language_checkbox = QCheckBox("Fix?")
 # 3. Checkbox: Hürde fixieren
 constraint_checkbox = QCheckBox("Fix?")
 
-# Die beiden Knöpfe werden initialisiert
+# Die Knöpfe werden initialisiert
 new_button = QPushButton("New", window)
 save_button = QPushButton("Save", window)
 load_button = QPushButton("Load", window)
+rate_button = QPushButton("Rate", window)
 
 # Funktion zum Anzeigen eines Ergebnises in einer
 # Messagebox
@@ -86,10 +87,25 @@ def onClick_load():
     job = load_job()
     job_messagebox(job)
     
+def onClick_rate():
+    rate_window = QWidget()
+    rate_layout = QHBoxLayout()
+    rate_rButton_easy = QRadioButton("Easy")
+    rate_rButton_normal = QRadioButton("Normal")
+    rate_rButton_hard = QRadioButton("Hard")
+    rate_rButton_impossible = QRadioButton("Impossible")
+    rate_layout.addWidget(rate_rButton_easy)
+    rate_layout.addWidget(rate_rButton_normal)
+    rate_layout.addWidget(rate_rButton_hard)
+    rate_layout.addWidget(rate_rButton_impossible)
+    rate_window.setLayout(rate_layout)
+    rate_window.show()
+    
 # Den Knöpfen werden ihre Aktionen zugeordnet
 new_button.clicked.connect(onClick_new)
 save_button.clicked.connect(onClick_save)
 load_button.clicked.connect(onClick_load)
+rate_button.clicked.connect(onClick_rate)
 
 # Die Elemente werden in das Layout hinzugefügt:
 layout.addWidget(write_label,0,0)
@@ -103,6 +119,7 @@ layout.addWidget(constraint_checkbox, 2, 2)
 layout.addWidget(new_button, 3, 0)
 layout.addWidget(save_button, 3, 1)
 layout.addWidget(load_button, 3, 2)
+layout.addWidget(rate_button, 4, 0)
 
 # Das Layout wird zum Fenster hinzugefügt
 window.setLayout(layout)
