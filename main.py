@@ -34,6 +34,13 @@ language.setFixedWidth(300)
 constraint = QLineEdit(window)
 constraint.setFixedWidth(300)
 
+# 1. Checkbox: Projekt fixieren
+project_checkbox = QCheckBox("Fix?")
+# 2. Checkbox: Sprache fixieren
+language_checkbox = QCheckBox("Fix?")
+# 3. Checkbox: Hürde fixieren
+constraint_checkbox = QCheckBox("Fix?")
+
 # Die beiden Knöpfe werden initialisiert
 new_button = QPushButton("New", window)
 save_button = QPushButton("Save", window)
@@ -47,12 +54,24 @@ def job_messagebox(job):
 
 # Die Aktionen beim Drücken der Knöpfe werden definiert
 def onClick_new():
-    project_str = get_project()
-    language_str = get_language()
-    constraint_str = get_constraint()
-    project.setText(project_str)
-    language.setText(language_str)
-    constraint.setText(constraint_str)
+    if project_checkbox.checkState():
+        project_str = project.text()
+    else:
+        project_str = get_project()
+        project.setText(project_str)
+    
+    if language_checkbox.checkState():
+        language_str = language.text()
+    else:
+        language_str = get_language()
+        language.setText(language_str)
+    
+    if constraint_checkbox.checkState():
+        constraint_str = constraint.text()
+    else:
+        constraint_str = get_constraint()
+        constraint.setText(constraint_str)
+        
     result_str = get_job(project_str, language_str, constraint_str)
     job_messagebox(result_str)
 
@@ -75,9 +94,12 @@ load_button.clicked.connect(onClick_load)
 # Die Elemente werden in das Layout hinzugefügt:
 layout.addWidget(write_label,0,0)
 layout.addWidget(project, 0, 1)
+layout.addWidget(project_checkbox, 0, 2)
 layout.addWidget(in_label, 1, 0)
 layout.addWidget(language, 1, 1)
+layout.addWidget(language_checkbox, 1, 2)
 layout.addWidget(constraint, 2, 1)
+layout.addWidget(constraint_checkbox, 2, 2)
 layout.addWidget(new_button, 3, 0)
 layout.addWidget(save_button, 3, 1)
 layout.addWidget(load_button, 3, 2)
