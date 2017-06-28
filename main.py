@@ -7,6 +7,7 @@ from PySide2.QtWidgets import *
 
 # Das backend wird importiert
 from backend import *
+from twitter import tweet_job
 
 import sys
 
@@ -47,6 +48,7 @@ new_button = QPushButton("New", window)
 save_button = QPushButton("Save", window)
 load_button = QPushButton("Load", window)
 rate_button = QPushButton("Rate", window)
+tweet_button = QPushButton("Tweet", window)
 
 # Funktion zum Anzeigen eines Ergebnises in einer
 # Messagebox
@@ -81,8 +83,8 @@ def onClick_save():
     project_str = project.text()
     language_str = language.text()
     constraint_str = constraint.text()
-    result_str = get_job(project_str, language_str, constraint_str)
-    save_job(result_str)
+    job = get_job(project_str, language_str, constraint_str)
+    save_job(job)
 
 def onClick_load():
     job = load_job()
@@ -91,14 +93,19 @@ def onClick_load():
 def onClick_rate():
     pass
     
-def onClick_rate2():
-    pass
-
+def onClick_tweet():
+    project_str = project.text()
+    language_str = language.text()
+    constraint_str = constraint.text()
+    job = get_job(project_str, language_str, constraint_str)
+    tweet_job(job)
+    
 # Den Knöpfen werden ihre Aktionen zugeordnet
 new_button.clicked.connect(onClick_new)
 save_button.clicked.connect(onClick_save)
 load_button.clicked.connect(onClick_load)
 rate_button.clicked.connect(onClick_rate)
+tweet_button.clicked.connect(onClick_tweet)
 
 # Die Elemente werden in das Layout hinzugefügt:
 layout.addWidget(write_label,0,0)
@@ -113,6 +120,7 @@ layout.addWidget(new_button, 3, 0)
 layout.addWidget(save_button, 3, 1)
 layout.addWidget(load_button, 3, 2)
 layout.addWidget(rate_button, 4, 0)
+layout.addWidget(tweet_button, 4, 1)
 
 # Das Layout wird zum Fenster hinzugefügt
 window.setLayout(layout)
