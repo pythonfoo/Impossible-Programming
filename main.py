@@ -15,6 +15,7 @@ app = QApplication(sys.argv)
 
 # Das Fenster wird erstellt
 window = QWidget()
+rate_window = QWidget()
 
 # Gitter Layout
 layout = QGridLayout()
@@ -88,19 +89,24 @@ def onClick_load():
     job_messagebox(job)
     
 def onClick_rate():
-    rate_window = QWidget()
-    rate_layout = QHBoxLayout()
+    rate_layout = QVBoxLayout()
     rate_rButton_easy = QRadioButton("Easy")
     rate_rButton_normal = QRadioButton("Normal")
     rate_rButton_hard = QRadioButton("Hard")
     rate_rButton_impossible = QRadioButton("Impossible")
+    rate_button = QPushButton("Rate")
+    rate_button.clicked.connect(onClick_rate2)
     rate_layout.addWidget(rate_rButton_easy)
     rate_layout.addWidget(rate_rButton_normal)
     rate_layout.addWidget(rate_rButton_hard)
     rate_layout.addWidget(rate_rButton_impossible)
+    rate_layout.addWidget(rate_button)
     rate_window.setLayout(rate_layout)
     rate_window.show()
     
+def onClick_rate2():
+    pass
+
 # Den Knöpfen werden ihre Aktionen zugeordnet
 new_button.clicked.connect(onClick_new)
 save_button.clicked.connect(onClick_save)
