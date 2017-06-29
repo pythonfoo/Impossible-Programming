@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys
 
 # Importieren des PySide Moduls
 from PySide2.QtCore import *
@@ -7,9 +8,13 @@ from PySide2.QtWidgets import *
 
 # Das backend wird importiert
 from backend import *
-from twitter import tweet_job
 
-import sys
+try:
+    from twitter import tweet_job 
+except ImportError:
+    twitter_integration = False
+else:
+    twitter_integration = True
 
 # So können Argumente für Qt5 dem Programm übergeben werden
 app = QApplication(sys.argv)
@@ -47,7 +52,8 @@ new_button = QPushButton("New", window)
 save_button = QPushButton("Save", window)
 load_button = QPushButton("Load", window)
 rate_button = QPushButton("Rate", window)
-tweet_button = QPushButton("Tweet", window)
+if twitter_integration:
+    tweet_button = QPushButton("Tweet", window)
 
 # Funktion zum Anzeigen eines Ergebnises in einer
 # Messagebox
@@ -97,8 +103,8 @@ def onClick_tweet():
     language_str = language.text()
     constraint_str = constraint.text()
     job = get_job(project_str, language_str, constraint_str)
-    result = tweet_job(job)
-    
+    if twitter_integration:
+        result = tweet_job(job)
     mb = QMessageBox(QMessageBox.Information, "Twitter Feedback", "Der Tweet wurde gesendet", QMessageBox.Ok, window)
     if not result:
         mb = QMessageBox(QMessageBox.Information, "Twitter Feedback", "Der Tweet war zu lang", QMessageBox.Ok, window)
@@ -110,7 +116,8 @@ new_button.clicked.connect(onClick_new)
 save_button.clicked.connect(onClick_save)
 load_button.clicked.connect(onClick_load)
 rate_button.clicked.connect(onClick_rate)
-tweet_button.clicked.connect(onClick_tweet)
+if twitter_integration:
+    tweet_button.clicked.connect(onClick_tweet)
 
 # Die Elemente werden in das Layout hinzugefügt:
 layout.addWidget(write_label,0,0)
@@ -125,7 +132,8 @@ layout.addWidget(new_button, 3, 0)
 layout.addWidget(save_button, 3, 1)
 layout.addWidget(load_button, 3, 2)
 layout.addWidget(rate_button, 4, 0)
-layout.addWidget(tweet_button, 4, 1)
+if twitter_integration:
+    layout.addWidget(tweet_button, 4, 1)
 
 # Das Layout wird zum Fenster hinzugefügt
 window.setLayout(layout)
