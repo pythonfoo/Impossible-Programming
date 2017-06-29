@@ -13,7 +13,7 @@ der/die/das für ein Betriebssystem optimiert ist
 sodass die Anzahl der Bytes durch ihre Hälfte teilbar ist (untere Hälfte, wenn ungerade)
 ohne Schleifen zu verwenden
 ohne Bedingungen zu verwenden
-mit maximal 100 verschiedenen Zeichen
+mit maximal 20 verschiedenen Zeichen
 ohne Benutzung der Tastatur
 nur mit dem Touchpad oder dem Trackpoint
 mit farbinvertierten Bildschirm
