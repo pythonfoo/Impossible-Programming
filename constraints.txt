@@ -26,3 +26,5 @@ ohne Strings zu verwenden
 ohne das Einbinden von Bibliotheken
 ohne den Operator "+" zu benutzen
 der/die/das auf dem Raspi 3 läuft.
+auf einem graphischen Taschenrechner.
+und benutze Emojis als Variablennamen
