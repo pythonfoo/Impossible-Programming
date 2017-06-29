@@ -24,3 +24,6 @@ einen Mehrwertsteuerrechner
 eine Quicksort Implementation
 dieses Programm
 einen Farbselektor
+einen Schachbot
+ein Go-Spiel mit Mehrspielermodus
+Tic-Tac-Toe
