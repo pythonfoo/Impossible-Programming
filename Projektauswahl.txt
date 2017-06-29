@@ -27,3 +27,5 @@ einen Farbselektor
 einen Schachbot
 ein Go-Spiel mit Mehrspielermodus
 Tic-Tac-Toe
+einen Pythoninterpreter
+einen Terminalemulator
