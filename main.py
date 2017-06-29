@@ -98,8 +98,14 @@ def onClick_tweet():
     language_str = language.text()
     constraint_str = constraint.text()
     job = get_job(project_str, language_str, constraint_str)
-    tweet_job(job)
+    result = tweet_job(job)
     
+    mb = QMessageBox(QMessageBox.Information, "Twitter Feedback", "Der Tweet wurde gesendet", QMessageBox.Ok, window)
+    if not result:
+        mb = QMessageBox(QMessageBox.Information, "Twitter Feedback", "Der Tweet war zu lang", QMessageBox.Ok, window)
+    mb.show()
+
+
 # Den Knöpfen werden ihre Aktionen zugeordnet
 new_button.clicked.connect(onClick_new)
 save_button.clicked.connect(onClick_save)

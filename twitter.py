@@ -22,5 +22,7 @@ def tweet_job(job):
     if len(job) <= max_len:
         job = "[Bot] " + job
         tweet(job)
+        return True
     else:
         print("Tut mir leid, das Zeichenlimit wurde erreicht")
+        return False
