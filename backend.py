@@ -21,6 +21,13 @@ def get_constraint():
     constraint = random.choice(constraint_list)
     return constraint
 
+def new_job():
+    project = get_project()
+    language = get_language()
+    constraint = get_constraint()
+    job = get_job(project, language, constraint)
+    return job
+
 def get_job(project, language, constraint):
     project = project.strip("\n")
     language = language.strip("\n")
