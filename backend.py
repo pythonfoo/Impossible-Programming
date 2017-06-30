@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+"""
+@author: dodo
+"""
 import random
 import list_gen
 

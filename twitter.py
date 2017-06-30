@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+"""
+@author: dodo
+"""
 import tweepy
 from twitter_keys import get_keys
 

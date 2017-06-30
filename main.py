@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+@author: dodo
+"""
 import sys
 
 # Importieren des PySide Moduls
@@ -143,4 +146,3 @@ window.show()
 
 # App ausführen
 app.exec_()
-
