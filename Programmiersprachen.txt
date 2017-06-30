@@ -1,43 +1,43 @@
 ActionScript
 AppleScript
+Assembler
+Bash
+Brainfuck
 C
 C#
 C++
+COBOL
 Coffescript
 D
 Erlang
+Fish
+Fortran
 Go
 Groovy
 Haskell
 Java
 Javascript
+Julia
 Latex
 Lisp
 Lua
 Matlab/Octave
+Microsoft Excel
+Objective-C
+Objective-C++
 OCaml
+Pascal
 Perl
 PHP
+Piet
 Python
 R 
 Ruby
 Scala
-Bash
-Fish
-Zsh
-Windows PowerShell
-Objective-C
-Objective-C++
-Fortran
-COBOL
-Julia
-Piet
-Brainfuck
-Microsoft Excel
-Visual Basic
-Pascal
 Scratch
-Swift
 Shakespeare
+Swift
+Visual Basic
 Whitespace
-Assembler
+Windows PowerShell
+Zsh

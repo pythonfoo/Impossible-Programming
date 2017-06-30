@@ -1,31 +1,31 @@
-einen Webserver (die Verbindung zum Webserver muss für zwei Stunden ununterbrochen aufrechterhalten werden)
-eine Quine
+dieses Programm
+ein Go-Spiel mit Mehrspielermodus
 ein Spiel mit mindestens einer Interaktionsmöglichkeit und grafischer Oberfläche
-einen wissenschaftlichen Taschenrechner mit grafischer Oberfläche
-eine Animation von mind. 30 s Länge und mind. 25 unterschiedlichen Bildern
-einen Webshop mit mind. 30 Artikeln, Bestellfunktion und Warenkorb
-eine Textsuchmaschine 
 eine 3D-Animation in ASCII 
-Pong
+eine Animation von mind. 30 s Länge und mind. 25 unterschiedlichen Bildern
+eine Quicksort Implementation
+eine Quine
+eine Textsuchmaschine 
+eine Vigenere Implementation
+einen Algorithmus für das Travelling Salesman Problem
+einen Bildschirmschoner
+einen Browser mit graphischer Oberfläche, Verlauf und Lesezeichenfunktion
+einen Farbselektor
+einen Funktionsplotter
+einen IRC Client
+einen Mehrwertsteuerrechner
+einen Primzahlgenerator
+einen Pythoninterpreter
+einen Schachbot
+einen Terminalemulator
+einen Twitterbot
+einen Webserver (die Verbindung zum Webserver muss für zwei Stunden ununterbrochen aufrechterhalten werden)
+einen Webshop mit mind. 30 Artikeln, Bestellfunktion und Warenkorb
+einen wissenschaftlichen Taschenrechner mit grafischer Oberfläche
+Game of Life
 Minesweeper
+Pacman
+Pong
 Snake
 Tetris
-Pacman
-einen Browser mit graphischer Oberfläche, Verlauf und Lesezeichenfunktion
-einen Primzahlgenerator
-einen IRC Client
-einen Twitterbot
-Game of Life
-einen Algorithmus für das Travelling Salesman Problem
-einen Funktionsplotter
-einen Bildschirmschoner
-eine Vigenere Implementation
-einen Mehrwertsteuerrechner
-eine Quicksort Implementation
-dieses Programm
-einen Farbselektor
-einen Schachbot
-ein Go-Spiel mit Mehrspielermodus
 Tic-Tac-Toe
-einen Pythoninterpreter
-einen Terminalemulator
