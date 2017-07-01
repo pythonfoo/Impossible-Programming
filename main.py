@@ -23,7 +23,7 @@ else:
 app = QApplication(sys.argv)
 
 # Das Fenster wird erstellt
-window = QWidget()
+main_window = QWidget()
 
 # Gitter Layout
 layout = QGridLayout()
@@ -34,13 +34,13 @@ write_label = QLabel("Schreibe")
 in_label = QLabel("in")
 
 # 1. Textfeld: Projekt
-project = QLineEdit(window)
+project = QLineEdit(main_window)
 project.setFixedWidth(300)
 # 2. Textfeld: Programmiersprache
-language = QLineEdit(window)
+language = QLineEdit(main_window)
 language.setFixedWidth(300)
 # 3. Textfeld: Herausforderung
-constraint = QLineEdit(window)
+constraint = QLineEdit(main_window)
 constraint.setFixedWidth(300)
 
 # 1. Checkbox: Projekt fixieren
@@ -51,17 +51,17 @@ language_checkbox = QCheckBox("Fix?")
 constraint_checkbox = QCheckBox("Fix?")
 
 # Die Knöpfe werden initialisiert
-new_button = QPushButton("New", window)
-save_button = QPushButton("Save", window)
-load_button = QPushButton("Load", window)
-rate_button = QPushButton("Rate", window)
+new_button = QPushButton("New", main_window)
+save_button = QPushButton("Save", main_window)
+load_button = QPushButton("Load", main_window)
+rate_button = QPushButton("Rate", main_window)
 if twitter_integration:
-    tweet_button = QPushButton("Tweet", window)
+    tweet_button = QPushButton("Tweet", main_window)
 
 # Funktion zum Anzeigen eines Ergebnises in einer
 # Messagebox
 def job_messagebox(job):
-    mb = QMessageBox(QMessageBox.Information, "Aufgabe", job, QMessageBox.Ok, window)
+    mb = QMessageBox(QMessageBox.Information, "Aufgabe", job, QMessageBox.Ok, main_window)
     mb.show()
 
 # Die Aktionen beim Drücken der Knöpfe werden definiert
@@ -108,9 +108,9 @@ def onClick_tweet():
     job = get_job(project_str, language_str, constraint_str)
     if twitter_integration:
         result = tweet_job(job)
-    mb = QMessageBox(QMessageBox.Information, "Twitter Feedback", "Der Tweet wurde gesendet", QMessageBox.Ok, window)
+    mb = QMessageBox(QMessageBox.Information, "Twitter Feedback", "Der Tweet wurde gesendet", QMessageBox.Ok, main_window)
     if not result:
-        mb = QMessageBox(QMessageBox.Information, "Twitter Feedback", "Der Tweet war zu lang", QMessageBox.Ok, window)
+        mb = QMessageBox(QMessageBox.Information, "Twitter Feedback", "Der Tweet war zu lang", QMessageBox.Ok, main_window)
     mb.show()
 
 
@@ -139,10 +139,10 @@ if twitter_integration:
     layout.addWidget(tweet_button, 4, 1)
 
 # Das Layout wird zum Fenster hinzugefügt
-window.setLayout(layout)
+main_window.setLayout(layout)
 
 # Fenster anzeigen
-window.show()
+main_window.show()
 
 # App ausführen
 app.exec_()
