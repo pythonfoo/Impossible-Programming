@@ -149,20 +149,21 @@ def onClick_tweet():
     mb.show()
 
 def onClick_rate_quit():
+    rating = 0
     if easy_rButton.pressed:
-        rating[0] = 1
-    if normal_rButton.pressed:
-        rating[0] = 2
-    if hard_rButton.pressed:
-        rating[0] = 3
-    if impossible_rButton.pressed:
-        rating[0] = 4
+        rating = 1
+    elif normal_rButton.pressed:
+        rating = 2
+    elif hard_rButton.pressed:
+        rating = 3
+    elif impossible_rButton.pressed:
+        rating = 4
     
     current_job= get_current_job()
     current_project = current_job[0]
     current_language = current_job[1]
     current_constraint = current_job[2]
-    current_rating = rating[0]
+    current_rating = rating
     save_rating(current_project, current_language, current_constraint, current_rating)
     mb = QMessageBox(QMessageBox.Information, "Bewertung erfolgreich", "Deine Bewertung wurde gespeichert.", QMessageBox.Ok, main_window)
     mb.show()
