@@ -21,6 +21,7 @@ else:
 
 global rating
 rating = [0]
+rating_strings = ("Easy", "Normal", "Hard", "Impossible")
 
 # So können Argumente für Qt5 dem Programm übergeben werden
 app = QApplication(sys.argv)
@@ -122,8 +123,15 @@ def onClick_save():
     save_job(job)
 
 def onClick_load():
-    job = load_job()
-    job_messagebox(job)
+    job = load_rating()
+    current_project = job[0]
+    current_language = job[1]
+    current_constraint = job[2]
+    current_rating = job[3]
+    job_str= get_job(current_project, current_language, current_constraint)
+    rating_str = rating_strings[int(current_rating) - 1]
+    mb = QMessageBox(QMessageBox.Information, rating_str, job_str, QMessageBox.Ok, main_window)
+    mb.show()
     
 def onClick_rate():
     rate_window.show()
