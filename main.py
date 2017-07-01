@@ -83,6 +83,14 @@ def job_messagebox(job):
     mb = QMessageBox(QMessageBox.Information, "Aufgabe", job, QMessageBox.Ok, main_window)
     mb.show()
 
+# Funktion um die aktuelle Aufgabe zu erhalten
+def get_current_job():
+    current_project = project.text()
+    current_language = language.text()
+    current_constraint = constraint.text()
+    return (current_project, current_language, current_constraint)
+
+
 # Die Aktionen beim Drücken der Knöpfe werden definiert
 def onClick_new():
     if project_checkbox.checkState():
