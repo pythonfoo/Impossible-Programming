@@ -22,6 +22,7 @@ einen Twitterbot
 einen Webserver (die Verbindung zum Webserver muss für zwei Stunden ununterbrochen aufrechterhalten werden)
 einen Webshop mit mind. 30 Artikeln, Bestellfunktion und Warenkorb
 einen wissenschaftlichen Taschenrechner mit grafischer Oberfläche
+einen Wort-Counter mit einem großen roten Button als Zählmethode
 Game of Life
 Minesweeper
 Pacman
@@ -29,4 +30,3 @@ Pong
 Snake
 Tetris
 Tic-Tac-Toe
-einen Wort-Counter mit einem großen roten Button als Zählmethode
