@@ -29,3 +29,4 @@ Pong
 Snake
 Tetris
 Tic-Tac-Toe
+einen Wort-Counter mit einem großen roten Button als Zählmethode
