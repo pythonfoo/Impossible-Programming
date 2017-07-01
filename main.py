@@ -24,6 +24,7 @@ app = QApplication(sys.argv)
 
 # Das Fenster wird erstellt
 main_window = QWidget()
+rate_window = QWidget()
 
 # Gitter Layout
 layout = QGridLayout()
