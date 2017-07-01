@@ -1,6 +1,8 @@
 , sodass die Anfangsbuchstaben jeder Zeile exakt die erste Zeile ergeben
 auf einem graphischen Taschenrechner.
 der/die/das auf dem Raspi 3 läuft.
+der/die/das den Arbeitsspeicher auslastet.
+der/die/das die CPU auslastet.
 der/die/das einem Joystick als Eingabemethode benutzt
 der/die/das für ein Betriebssystem optimiert ist
 in einer einzigen Datei mit exakt 1337 Bytes (es MUSS ein Unicode-Zeichen vorkommen)
