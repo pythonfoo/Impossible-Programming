@@ -9,6 +9,7 @@ project_filename = "Projektauswahl.txt"
 language_filename = "Programmiersprachen.txt"
 constraint_filename = "constraints.txt"
 job_filename = "Aufgaben.txt"
+rating_filename = "Bewertungen.txt"
 
 def get_project():
     project_list = list_gen.lines_from_file(project_filename)
@@ -43,6 +44,10 @@ def save_job(job_str):
     job_str += "\n\n"
     with open(job_filename, "a") as file_obj:
         file_obj.write(job_str)
+
+def save_rating(project, language, constraint, rating):
+    with open(rating_filename, "a") as file_obj:
+        file_obj.write("{};{};{};{}\n".format(project, language, constraint, rating))
 
 def load_job():
     job_list = list_gen.lines_from_file(job_filename)
