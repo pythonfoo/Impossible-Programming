@@ -85,9 +85,9 @@ def job_messagebox(job):
 
 # Funktion um die aktuelle Aufgabe zu erhalten
 def get_current_job():
-    current_project = project.text()
-    current_language = language.text()
-    current_constraint = constraint.text()
+    current_project = project.text().strip("\n")
+    current_language = language.text().strip("\n")
+    current_constraint = constraint.text().strip("\n")
     return (current_project, current_language, current_constraint)
 
 
