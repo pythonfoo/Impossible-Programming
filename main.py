@@ -149,6 +149,15 @@ def onClick_rate_quit():
         rating[0] = 3
     if impossible_rButton.pressed:
         rating[0] = 4
+    
+    current_job= get_current_job()
+    current_project = current_job[0]
+    current_language = current_job[1]
+    current_constraint = current_job[2]
+    current_rating = rating[0]
+    save_rating(current_project, current_language, current_constraint, current_rating)
+    mb = QMessageBox(QMessageBox.Information, "Bewertung erfolgreich", "Deine Bewertung wurde gespeichert.", QMessageBox.Ok, main_window)
+    mb.show()
     rate_window.close()
 
 # Den Knöpfen werden ihre Aktionen zugeordnet
