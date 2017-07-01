@@ -13,7 +13,7 @@ from PySide2.QtWidgets import *
 from backend import *
 
 try:
-    from twitter import tweet_job 
+    from twitter import tweet_job
 except ImportError:
     twitter_integration = False
 else:
@@ -78,12 +78,15 @@ rate_quit_button = QPushButton("Rate")
 
 # Funktion zum Anzeigen eines Ergebnises in einer
 # Messagebox
+
+
 def job_messagebox(job):
     mb = QMessageBox(QMessageBox.Information, "Aufgabe", job, QMessageBox.Ok, main_window)
     mb.show()
 
-# Funktion um die aktuelle Aufgabe zu erhalten
+
 def get_current_job():
+    # Funktion um die aktuelle Aufgabe zu erhalten
     current_project = project.text().strip("\n")
     current_language = language.text().strip("\n")
     current_constraint = constraint.text().strip("\n")
@@ -97,21 +100,22 @@ def onClick_new():
     else:
         project_str = get_project()
         project.setText(project_str)
-    
+
     if language_checkbox.checkState():
         language_str = language.text()
     else:
         language_str = get_language()
         language.setText(language_str)
-    
+
     if constraint_checkbox.checkState():
         constraint_str = constraint.text()
     else:
         constraint_str = get_constraint()
         constraint.setText(constraint_str)
-        
+
     result_str = get_job(project_str, language_str, constraint_str)
     job_messagebox(result_str)
+
 
 def onClick_save():
     project_str = project.text()
@@ -120,20 +124,23 @@ def onClick_save():
     job = get_job(project_str, language_str, constraint_str)
     save_job(job)
 
+
 def onClick_load():
     job = load_rating()
     current_project = job[0]
     current_language = job[1]
     current_constraint = job[2]
     current_rating = job[3]
-    job_str= get_job(current_project, current_language, current_constraint)
+    job_str = get_job(current_project, current_language, current_constraint)
     rating_str = rating_strings[int(current_rating) - 1]
     mb = QMessageBox(QMessageBox.Information, rating_str, job_str, QMessageBox.Ok, main_window)
     mb.show()
-    
+
+
 def onClick_rate():
     rate_window.show()
-    
+
+
 def onClick_tweet():
     project_str = project.text()
     language_str = language.text()
@@ -146,6 +153,7 @@ def onClick_tweet():
         mb = QMessageBox(QMessageBox.Information, "Twitter Feedback", "Der Tweet war zu lang", QMessageBox.Ok, main_window)
     mb.show()
 
+
 def onClick_rate_quit():
     rating = 0
     if easy_rButton.isChecked():
@@ -156,8 +164,8 @@ def onClick_rate_quit():
         rating = 3
     elif impossible_rButton.isChecked():
         rating = 4
-    
-    current_job= get_current_job()
+
+    current_job = get_current_job()
     current_project = current_job[0]
     current_language = current_job[1]
     current_constraint = current_job[2]
@@ -178,7 +186,7 @@ if twitter_integration:
 rate_quit_button.clicked.connect(onClick_rate_quit)
 
 # Die Elemente werden in das Hauptlayout hinzugefügt:
-layout.addWidget(write_label,0,0)
+layout.addWidget(write_label, 0, 0)
 layout.addWidget(project, 0, 1)
 layout.addWidget(project_checkbox, 0, 2)
 layout.addWidget(in_label, 1, 0)
