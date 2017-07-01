@@ -19,8 +19,6 @@ except ImportError:
 else:
     twitter_integration = True
 
-global rating
-rating = [0]
 rating_strings = ("Easy", "Normal", "Hard", "Impossible")
 
 # So können Argumente für Qt5 dem Programm übergeben werden
