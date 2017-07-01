@@ -62,6 +62,7 @@ def load_job():
 def load_rating():
     job_list = list_gen.lines_from_file(rating_filename)
     current_job = random.choice(job_list)
+    current_job = current_job.split(";")
     current_project = current_job[0]
     current_language = current_job[1]
     current_constraint = current_job[2]
