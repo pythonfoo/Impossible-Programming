@@ -19,6 +19,9 @@ except ImportError:
 else:
     twitter_integration = True
 
+global rating
+rating = [0]
+
 # So können Argumente für Qt5 dem Programm übergeben werden
 app = QApplication(sys.argv)
 
@@ -29,10 +32,15 @@ rate_window = QWidget()
 # Gitter Layout
 layout = QGridLayout()
 
+# Bewertungsfenster Layout:
+rate_layout = QVBoxLayout()
+
 # 1. Label "Schreibe"
 write_label = QLabel("Schreibe")
 # 2. Label "in"
 in_label = QLabel("in")
+
+# Hauptfenster:
 
 # 1. Textfeld: Projekt
 project = QLineEdit(main_window)
@@ -58,6 +66,16 @@ load_button = QPushButton("Load", main_window)
 rate_button = QPushButton("Rate", main_window)
 if twitter_integration:
     tweet_button = QPushButton("Tweet", main_window)
+
+# Bewertungsfenster:
+
+# Radiobuttons für die Bewertung
+easy_rButton = QRadioButton("Easy")
+normal_rButton = QRadioButton("Normal")
+hard_rButton = QRadioButton("Hard")
+impossible_rButton = QRadioButton("Impossible")
+# Button zum Beenden der Bewertung:
+rate_quit_button = QPushButton("Rate")
 
 # Funktion zum Anzeigen eines Ergebnises in einer
 # Messagebox
@@ -100,7 +118,7 @@ def onClick_load():
     job_messagebox(job)
     
 def onClick_rate():
-    pass
+    rate_window.show()
     
 def onClick_tweet():
     project_str = project.text()
@@ -114,6 +132,16 @@ def onClick_tweet():
         mb = QMessageBox(QMessageBox.Information, "Twitter Feedback", "Der Tweet war zu lang", QMessageBox.Ok, main_window)
     mb.show()
 
+def onClick_rate_quit():
+    if easy_rButton.pressed:
+        rating[0] = 1
+    if normal_rButton.pressed:
+        rating[0] = 2
+    if hard_rButton.pressed:
+        rating[0] = 3
+    if impossible_rButton.pressed:
+        rating[0] = 4
+    rate_window.close()
 
 # Den Knöpfen werden ihre Aktionen zugeordnet
 new_button.clicked.connect(onClick_new)
@@ -123,7 +151,9 @@ rate_button.clicked.connect(onClick_rate)
 if twitter_integration:
     tweet_button.clicked.connect(onClick_tweet)
 
-# Die Elemente werden in das Layout hinzugefügt:
+rate_quit_button.clicked.connect(onClick_rate_quit)
+
+# Die Elemente werden in das Hauptlayout hinzugefügt:
 layout.addWidget(write_label,0,0)
 layout.addWidget(project, 0, 1)
 layout.addWidget(project_checkbox, 0, 2)
@@ -139,8 +169,16 @@ layout.addWidget(rate_button, 4, 0)
 if twitter_integration:
     layout.addWidget(tweet_button, 4, 1)
 
+# Die Elemente werden in das Bewertungslayout hinzugefügt:
+rate_layout.addWidget(easy_rButton)
+rate_layout.addWidget(normal_rButton)
+rate_layout.addWidget(hard_rButton)
+rate_layout.addWidget(impossible_rButton)
+rate_layout.addWidget(rate_quit_button)
+
 # Das Layout wird zum Fenster hinzugefügt
 main_window.setLayout(layout)
+rate_window.setLayout(rate_layout)
 
 # Fenster anzeigen
 main_window.show()
