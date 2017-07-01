@@ -150,13 +150,13 @@ def onClick_tweet():
 
 def onClick_rate_quit():
     rating = 0
-    if easy_rButton.pressed:
+    if easy_rButton.isChecked():
         rating = 1
-    elif normal_rButton.pressed:
+    elif normal_rButton.isChecked():
         rating = 2
-    elif hard_rButton.pressed:
+    elif hard_rButton.isChecked():
         rating = 3
-    elif impossible_rButton.pressed:
+    elif impossible_rButton.isChecked():
         rating = 4
     
     current_job= get_current_job()
