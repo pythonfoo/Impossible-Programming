@@ -30,3 +30,4 @@ ohne Strings zu verwenden
 sodass die Anzahl der Bytes durch ihre Hälfte teilbar ist (untere Hälfte, wenn ungerade)
 und benutze Emojis als Variablennamen
 und nutze dabei möglichst viele Eigenheiten der Sprache, die den Code so kurz und unverständlich wie möglich machen
+nur unter Benutzung von While-Schleifen und ohne Variablen zu verwenden
