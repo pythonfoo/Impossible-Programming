@@ -4,12 +4,31 @@
 """
 import random
 import list_gen
+import os
 
-project_filename = "Projektauswahl.txt"
-language_filename = "Programmiersprachen.txt"
-constraint_filename = "Herausforderungen.txt"
-job_filename = "Aufgaben.txt"
-rating_filename = "Bewertungen.txt"
+default_filenames = [
+"Projektauswahl.txt",
+"Programmiersprachen.txt",
+"Herausforderungen.txt",
+"Aufgaben.txt",
+"Bewertungen.txt"
+]
+
+cd = os.curdir
+folder_content = os.listdir()
+for f in default_filenames:
+    if f in folder_content:
+        pass
+    else:
+        with open(f, "w") as file_obj:
+            file_obj.write("")
+
+project_filename = default_filenames[0]
+language_filename = default_filenames[1]
+constraint_filename = default_filenames[2]
+job_filename = default_filenames[3]
+rating_filename = default_filenames[4]
+
 
 def get_project():
     project_list = list_gen.lines_from_file(project_filename)
