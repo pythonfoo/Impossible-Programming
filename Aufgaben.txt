@@ -190,3 +190,49 @@ Schreibe einen Bildschirmschoner in Brainfuck in Emacs (ohne Einrückungen und S
 
 Schreibe einen IRC Client in Julia nur mit dem Touchpad oder dem Trackpoint.
 
+Schreibe einen Primzahlgenerator in Swift in Vim (ohne Einrückungen und Syntax Highlighting).
+
+Schreibe Game of Life in Scratch in einer Stunde.
+
+Schreibe Game of Life in Microsoft Excel nur mit dem Touchpad oder dem Trackpoint.
+
+Schreibe eine Quicksort Implementation in Python der/die/das einem Joystick als Eingabemethode benutzt.
+
+Schreibe einen Webserver (die Verbindung zum Webserver muss für zwei Stunden ununterbrochen aufrechterhalten werden) in Zsh ohne das Einbinden von Bibliotheken.
+
+Schreibe eine Quicksort Implementation in Swift mit nur einer Variablen.
+
+Schreibe eine Quicksort Implementation in Swift mit nur einer Variablen.
+
+Schreibe eine Quicksort Implementation in Swift mit nur einer Variablen.
+
+Schreibe Pong in Ruby ohne Bedingungen zu verwenden.
+
+Schreibe Pong in Python in Vim (ohne Einrückungen und Syntax Highlighting).
+
+Schreibe einen Twitterbot in Ruby , sodass die Anfangsbuchstaben jeder Zeile exakt die erste Zeile ergeben.
+
+Schreibe ein Spiel mit mindestens einer Interaktionsmöglichkeit und grafischer Oberfläche in Python mit Twitter DMs als Eingabemethode.
+
+Schreibe ein Spiel mit mindestens einer Interaktionsmöglichkeit und grafischer Oberfläche in C in einer Stunde.
+
+Schreibe eine Quicksort Implementation in Bash mit nur einer Variablen.
+
+Schreibe einen Pythoninterpreter in C der/die/das auf dem Raspi 3 läuft..
+
+Schreibe eine Textsuchmaschine  in Assembler mit maximal 20 verschiedenen Zeichen.
+
+Schreibe Tic-Tac-Toe in Assembler mit verbundenen Augen.
+
+Schreibe eine Quicksort Implementation in Assembler in einer Stunde.
+
+Schreibe einen Algorithmus für das Travelling Salesman Problem in Perl in einer einzigen Datei mit nicht mehr als 500 Zeichen.
+
+Schreibe dieses Programm in COBOL auf einem graphischen Taschenrechner..
+
+Schreibe eine Vigenere Implementation in Julia der/die/das die CPU auslastet..
+
+Schreibe dieses Programm in Fortran in einer einzigen Zeile.
+
+Schreibe einen Schachbot in Python der/die/das auf dem Raspi 3 läuft..
+
