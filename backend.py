@@ -7,7 +7,7 @@ import list_gen
 
 project_filename = "Projektauswahl.txt"
 language_filename = "Programmiersprachen.txt"
-constraint_filename = "constraints.txt"
+constraint_filename = "Herausforderungen.txt"
 job_filename = "Aufgaben.txt"
 rating_filename = "Bewertungen.txt"
 
